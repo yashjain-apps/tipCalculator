@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -18,8 +18,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" alignment="center" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="rSm-jy-w1P" userLabel="Super Stack View">
-                                <rect key="frame" x="70" y="122" width="480" height="218"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="rSm-jy-w1P" userLabel="Super Stack View">
+                                <rect key="frame" x="75" y="136" width="480" height="218"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QoB-ZM-2rj" userLabel="Bill Amount Stack View">
                                         <rect key="frame" x="0.0" y="0.0" width="480" height="30"/>
@@ -116,12 +116,10 @@
                                     <constraint firstItem="5XM-rk-GNp" firstAttribute="leading" secondItem="rSm-jy-w1P" secondAttribute="leading" id="MbR-6f-omw"/>
                                 </constraints>
                             </stackView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="calc.jpeg" translatesAutoresizingMaskIntoConstraints="NO" id="Ff3-Lg-3eh">
-                                <rect key="frame" x="161" y="388" width="296" height="171"/>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Tip Calculator" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AQK-BT-Pkx">
-                                <rect key="frame" x="194" y="20" width="165" height="62"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tip Calculator" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AQK-BT-Pkx">
+                                <rect key="frame" x="120" y="20" width="165" height="80"/>
                                 <constraints>
+                                    <constraint firstAttribute="width" constant="165" id="4EW-Kn-Lgk"/>
                                     <constraint firstAttribute="height" constant="80" id="kQF-uL-hmV"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="19"/>
@@ -129,16 +127,23 @@
                                 <color key="highlightedColor" red="0.9983488917350769" green="0.74184787273406982" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="shadowColor" cocoaTouchSystemColor="lightTextColor"/>
                             </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="calc.jpeg" translatesAutoresizingMaskIntoConstraints="NO" id="Ff3-Lg-3eh">
+                                <rect key="frame" x="120" y="425" width="391" height="144"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="144" id="yVC-L5-rH2"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.97773414850234985" green="0.47483640909194946" blue="0.023050995543599129" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="AQK-BT-Pkx" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="100" id="82a-UN-tL6"/>
-                            <constraint firstItem="Ff3-Lg-3eh" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="60" id="CvU-jK-8YR"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="rSm-jy-w1P" secondAttribute="bottom" constant="360" id="D7g-Z7-CYO"/>
-                            <constraint firstItem="rSm-jy-w1P" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="50" id="pJi-D9-kBQ"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="Ff3-Lg-3eh" secondAttribute="trailing" constant="60" id="sxm-kd-gcN"/>
-                            <constraint firstAttribute="trailing" secondItem="rSm-jy-w1P" secondAttribute="trailing" constant="50" id="vyv-N4-ZTm"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Ff3-Lg-3eh" secondAttribute="bottom" constant="41" id="wTT-1M-zyR"/>
+                            <constraint firstItem="Ff3-Lg-3eh" firstAttribute="leading" secondItem="AQK-BT-Pkx" secondAttribute="leading" id="Cjc-NY-IZv"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="rSm-jy-w1P" secondAttribute="bottom" constant="246" id="D7g-Z7-CYO"/>
+                            <constraint firstItem="AQK-BT-Pkx" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="V02-CB-8Ve"/>
+                            <constraint firstItem="Ff3-Lg-3eh" firstAttribute="centerX" secondItem="rSm-jy-w1P" secondAttribute="centerX" id="bQ3-aQ-09d"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Ff3-Lg-3eh" secondAttribute="bottom" constant="31" id="e4O-BX-6H7"/>
+                            <constraint firstItem="rSm-jy-w1P" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="55" id="pJi-D9-kBQ"/>
+                            <constraint firstAttribute="trailing" secondItem="rSm-jy-w1P" secondAttribute="trailing" constant="45" id="vyv-N4-ZTm"/>
                         </constraints>
                     </view>
                     <connections>
